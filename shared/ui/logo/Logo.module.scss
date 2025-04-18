@@ -1,0 +1,30 @@
+@mixin svg_element {
+  position: absolute;
+  top: 15px;
+  left: 6px;
+}
+
+.primary {
+  position: relative;
+
+  svg {
+    fill: var(--Secondary-500);
+  }
+
+  svg:nth-of-type(2) {
+    stroke: var(--Base-0);
+    @include svg_element;
+  }
+}
+
+.secondary {
+  position: relative;
+  svg {
+    fill: var(--Base-0);
+  }
+
+  svg:nth-of-type(2) {
+    stroke: var(--Secondary-500);
+    @include svg_element;
+  }
+}

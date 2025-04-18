@@ -1,0 +1,72 @@
+@import 'src/app/page.module.scss';
+
+@mixin main-button-base {
+ @include button;
+  padding: 0.5rem 2.1rem;
+  @include rounded-border;
+  min-width: 7.625rem;
+  border: 2px solid transparent;
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+//primary button
+
+.primary {
+  @include Bold_medium;
+  @include main-button-base;
+
+  color: var(--Base-0);
+  background-color: var(--Secondary-300);
+
+
+  &:hover {
+    background-color: var(--Secondary-100);
+  }
+
+  &:active {
+    background-color: var(--Secondary-600);
+  }
+
+  &:disabled {
+    background-color: var(--Text-Paragraph);
+  }
+
+  &:focus {
+    border-color: var(--Secondary-800);
+  }
+}
+
+//secondary button
+
+.secondary {
+  @include Bold_medium;
+  @include main-button-base;
+  background-color: var(--Base-0);
+  color: var(--Base-1000);
+  border-color: var(--Base-300);
+
+  &:hover {
+    border-color: var(--Secondary-300);
+  }
+
+  &:focus {
+    border-color: var(--Secondary-300);
+    color: var(--Secondary-300);
+
+  }
+
+  &:active {
+    border-color: var(--Secondary-1000);
+    color: var(--Secondary-1000);
+  }
+
+  &:disabled {
+    border-color: var(--Base-300);
+    color: var(--Text-Disabled);
+  }
+}
+
+
+

@@ -1,0 +1,11 @@
+@import 'src/app/page.module.scss';
+
+.navigation {
+  @include flex(row, center, center);
+  gap: 4rem;
+}
+
+.navigation_item {
+  @include Regular_16;
+  color: var(--Base-1000);
+}

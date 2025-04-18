@@ -1,0 +1,23 @@
+@import 'src/app/page.module.scss';
+.header_border {
+  border-bottom: 1.5px solid var(--Base-200);
+
+}
+.header_container {
+  @include flex(row, space-between, center);
+  @include main_container;
+  padding: 2rem;
+
+  div {
+    @include flex(row, space-between, center);
+    gap: 1rem
+  }
+}
+
+.logo_with_name_container {
+  @include flex(row, center, center);
+  @include Bold_20;
+  font-family: inherit;
+  gap: 0.5rem
+}
+

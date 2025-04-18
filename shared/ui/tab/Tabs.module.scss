@@ -1,0 +1,52 @@
+@import 'src/app/page.module.scss';
+
+.tabs {
+  width: fit-content;
+}
+
+.tabList {
+  display: flex;
+  gap: 2rem;
+  background-color: var(--Secondary-100-transparent-1);
+  border: 1px solid var(--Base-300);
+  @include rounded-border;
+  padding: 0.5rem
+}
+
+.tabButton {
+  @include Regular_16;
+  font-family: inherit;
+  background: none;
+  border: none;
+  padding: 0.5rem 3rem;
+  cursor: pointer;
+  color: var(--Base-600);
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:active {
+    color: var(--Secondary-300);
+  }
+}
+
+.active {
+  @include Bold_16;
+  color: var(--Secondary-300);
+  background-color: var(--Base-0);
+  border: 1px solid var(--Base-200);
+  border-radius: 6px;
+
+  &:hover,
+  &:active {
+    background-color: var(--Secondary-100-transparent-3);
+  }
+
+  &:focus {
+    background-color: var(--Secondary-300-transparent-3);
+
+  }
+}
+
+.tabPanel {
+  padding: 1rem 0;
+}

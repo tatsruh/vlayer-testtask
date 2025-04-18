@@ -1,0 +1,94 @@
+@mixin H1 {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 110%;
+  letter-spacing: -1%;
+}
+@mixin H3 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 125%;
+  letter-spacing: -1%;
+}
+@mixin H4 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: -1%;
+}
+@mixin Bold_medium {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+}
+@mixin Bold_24 {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: -1px;
+}
+@mixin Bold_20 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 140%;
+}
+@mixin Bold_16 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.5px;
+}
+@mixin Bold_12 {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+}
+@mixin Regular_20 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 160%;
+}
+@mixin Regular_16 {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+//button
+@mixin button {
+  font-family: inherit;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out,
+  color 0.3s ease-in-out,
+  border-color 0.3s ease-in-out,
+  transform 0.2s ease-in-out;
+}
+
+//container
+@mixin main_container {
+  max-width: 1310px;
+  margin: auto;
+}
+@mixin container {
+  box-sizing: border-box;
+  width: 100%;
+}
+@mixin flex($direction: row, $justify: start, $align: start) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin rounded-border($radius: 8px) {
+  border-radius: $radius;
+}
+
+@mixin transition($property: box-shadow, $duration: 0.3s, $ease: ease) {
+  transition: $property $duration $ease;
+}

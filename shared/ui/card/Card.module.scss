@@ -1,0 +1,83 @@
+@import 'src/app/page.module.scss';
+
+
+.card_container {
+  font-family: inherit;
+  position: relative;
+  width: fit-content;
+  max-width: 21.5rem;
+  @include flex(column, start, start);
+  gap: 2rem;
+  box-sizing: border-box;
+  background-color: var(--Base-0);
+  border: 1px solid var(--Neutral-200);
+  @include rounded-border;
+  @include transition(box-shadow);
+
+  &:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  img {
+    @include rounded-border;
+  }
+}
+
+.description_container {
+  @include container;
+  padding: 0.5rem 1.5rem;
+}
+
+.title_container {
+  @include container;
+  @include flex(row, space-between, start);
+
+  h4 {
+    @include H4;
+    margin: 1rem 0;
+  }
+}
+
+.description {
+  @include Regular_16;
+  color: var(--Base-600);
+  margin: 0 0 1rem 0;
+}
+
+.span_basics {
+  @include Regular_16;
+  color: var(--Base-600);
+}
+
+.span_price {
+  @include Bold_24;
+  color: var(--Secondary-500);
+  margin-right: 5px;
+}
+
+.card_category_container {
+  position: absolute;
+  bottom: 173px;
+  left: -15px;
+  @include flex(row, center, center);
+  padding: 0.5rem 1.2rem;
+  background-color: var(--Secondary-500);
+  color: var(--Base-0);
+  @include rounded-border;
+
+  span {
+    @include Bold_12;
+    text-transform: uppercase;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 0;
+    border-right: 15px solid var(--Secondary-500);
+    border-bottom: 15px solid transparent;
+  }
+}

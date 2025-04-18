@@ -1,0 +1,31 @@
+@import 'src/app/page.module.scss';
+
+.background_container {
+  background-image: url('../../../public/MapIllustration.png');
+  background-repeat: no-repeat;
+  background-position: right top;
+  position: relative;
+}
+
+.main_container {
+  @include main_container;
+  @include flex(row, start, center);
+  font-family: inherit;
+  gap: 3rem;
+  margin: 10rem auto;
+  div:first-child {
+    max-width: 34rem;
+  }
+  h1 {
+    @include H1;
+  }
+  p {
+    @include Regular_20;
+    max-width: 26rem;
+    color: var(--Base-1000);
+  }
+}
+.statistics_container {
+  @include flex(row, start, center);
+  margin-top: 4rem;
+}
