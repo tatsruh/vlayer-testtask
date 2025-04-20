@@ -2,10 +2,12 @@
 
 .tabs {
   width: fit-content;
+  @include flex(column, center, center);
 }
 
 .tabList {
   display: flex;
+  width: fit-content;
   gap: 2rem;
   background-color: var(--Secondary-100-transparent-1);
   border: 1px solid var(--Base-300);

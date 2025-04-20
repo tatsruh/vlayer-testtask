@@ -6,8 +6,8 @@
   position: relative;
   width: fit-content;
   max-width: 21.5rem;
-  @include flex(column, start, start);
-  gap: 2rem;
+  @include flex(column, start, justify-content);
+  gap: 1.5rem;
   box-sizing: border-box;
   background-color: var(--Base-0);
   border: 1px solid var(--Neutral-200);
@@ -23,9 +23,44 @@
   }
 }
 
+.card_container_secondary {
+  @media (max-width: 768px) {
+    max-width: 10rem;
+    gap: 0.5rem;
+    img {
+      max-width: 100%;
+      max-height: fit-content;
+    }
+    p {
+      font-size: 7px;
+      margin: 0;
+      padding-left: 0.5rem;
+    }
+    .title_container {
+      padding-left: 0.5rem;
+      h4 {
+        @include H4_Mobile;
+        margin: 0;
+      }
+    }
+    span {
+      font-size: 12px
+    }
+
+    button {
+      display: none;
+    }
+    div {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
 .description_container {
-  @include container;
-  padding: 0.5rem 1.5rem;
+  @include flex(column, start, start);
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .title_container {
@@ -34,7 +69,7 @@
 
   h4 {
     @include H4;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
   }
 }
 

@@ -5,26 +5,24 @@ import Image from 'next/image';
 import style from './Card.module.scss';
 import { IconButton } from '../icon/IconButton';
 import { CardCategory } from './CardCategory';
+import { PropertyProps } from '@/features/propertiesSlice';
 
-export type CardProps = {
-  imageSrc: string;
-  title: string;
-  price: string;
-  address: string;
-  category?: string;
-  withCategory?: boolean;
+export type CardProps = Omit<PropertyProps, 'id'> & {
+  version?: 'primary' | 'secondary';
 };
-
 export const Card: React.FC<CardProps> = ({
   imageSrc,
   address,
   price,
   title,
-  category = 'house',
+  category = 'House',
   withCategory = false,
+  version = 'primary',
 }: CardProps) => {
   return (
-    <div className={style.card_container}>
+    <div
+      className={`${style.card_container} ${version === 'secondary' ? style.card_container_secondary : ''}`}
+    >
       <Image src={imageSrc} alt="Card image" width={340} height={200} />
       <div className={style.description_container}>
         <div className={style.title_container}>

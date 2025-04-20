@@ -1,0 +1,59 @@
+@import 'src/app/page.module.scss';
+
+@mixin flexContainer($direction: column, $justify: center, $align: center) {
+  @include flex($direction, $justify, $align);
+  width: 100%;
+}
+
+.footer_container {
+  @include main_container;
+  @include flexContainer(column);
+
+  @media (max-width: 768px) {
+    padding-left: 1rem;
+  }
+}
+
+.footer_menu_container,
+.footer_contact_container {
+  @include flexContainer(row, space-between, center);
+  margin: 3rem 0;
+}
+
+.footer_menu_wrapper {
+  border-bottom: 1px solid var(--Border-Footer);
+  width: 100%;
+
+  ul {
+    @include flex(row, space-between, center);
+    gap: 4rem;
+    padding-left: 1rem;
+
+    @media (max-width: 768px) {
+      @include flex(row, space-around, center);
+    }
+  }
+
+  li {
+    text-transform: uppercase;
+    @include Regular_16;
+    color: var(--Base-600);
+  }
+}
+
+.footer_contact_container {
+  span {
+    @include Regular_16;
+    color: var(--Base-600);
+  }
+
+  ul {
+    @include flex(row, space-between, center);
+    gap: 2rem;
+    color: var(--Base-600);
+  }
+
+  @media (max-width: 768px) {
+    @include flexContainer(column, center, center);
+  }
+}

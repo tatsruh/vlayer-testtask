@@ -3,9 +3,17 @@
 .navigation {
   @include flex(row, center, center);
   gap: 4rem;
+  @media (max-width: 768px) {
+    @include flex(column, center, start);
+    padding-left: 0;
+    gap: 2rem;
+  }
 }
 
 .navigation_item {
   @include Regular_16;
   color: var(--Base-1000);
+  @media (max-width: 768px) {
+    @include Regular_26;
+  }
 }

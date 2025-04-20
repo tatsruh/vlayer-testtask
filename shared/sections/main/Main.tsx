@@ -12,7 +12,7 @@ export const Main = () => {
       <main className={style.main_container}>
         <div>
           <h1>Buy, rent, or sell your property easily</h1>
-          <p>
+          <p className={style.description}>
             A great platform to buy, sell, or even rent your properties without
             any commisions.
           </p>
@@ -21,14 +21,17 @@ export const Main = () => {
             <Statistics amount={'10k+'} content={'properties'}></Statistics>
           </div>
         </div>
+      </main>
+      <div className={style.card}>
         <Card
           title={'Beverly Springfield'}
           address={'2821 Lake Sevilla, Palm Harbor'}
           price={'2,700'}
           withCategory={false}
-          imageSrc={image.src}
+          imageSrc={image}
+          version={'secondary'}
         ></Card>
-      </main>
+      </div>
     </div>
   );
 };

@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
 
-import style from './Header.module.scss';
-import { Logo } from '../../ui/logo/Logo';
+import style from './Logo.module.scss';
+import { Logo } from './Logo';
 
 export const LogoWithName = () => {
   return (

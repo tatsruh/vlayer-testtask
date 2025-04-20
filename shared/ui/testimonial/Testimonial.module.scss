@@ -1,0 +1,20 @@
+@import 'src/app/page.module.scss';
+
+.testimonial_container {
+  font-family: inherit;
+  @include flex(column, center, center);
+}
+.testimonial_text {
+  @include Regular_20;
+  max-width: 46rem;
+  color: var(--Base-1000);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.testimonial_name {
+  @include Bold_16;
+}
+.testimonial_profession {
+  @include Regular_16;
+  color: var(--Base-600);
+}

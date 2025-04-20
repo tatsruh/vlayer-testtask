@@ -1,10 +1,19 @@
 @import 'src/app/page.module.scss';
 
 .background_container {
-  background-image: url('../../../public/MapIllustration.png');
+  background-image: url('../../../public/MapIllustration.png'),
+  linear-gradient(13deg, rgba(115, 42, 155, 0.1) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 100%);
   background-repeat: no-repeat;
   background-position: right top;
   position: relative;
+  min-height: 46rem;
+  @media (max-width: 768px) {
+    min-height: 55rem;
+    background-position: center bottom;
+    background-image: url('../../../public/MapIllustration2Mobile.png'),
+    linear-gradient(180deg, rgba(115, 42, 155, 0.1) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 100%);
+
+  }
 }
 
 .main_container {
@@ -12,20 +21,51 @@
   @include flex(row, start, center);
   font-family: inherit;
   gap: 3rem;
-  margin: 10rem auto;
+  padding: 8rem 0;
+
   div:first-child {
     max-width: 34rem;
+    @media (max-width: 768px) {
+      @include flex(column, start, center);
+      max-width: 20rem;
+    }
   }
+
   h1 {
     @include H1;
   }
-  p {
+
+  .description {
     @include Regular_20;
     max-width: 26rem;
     color: var(--Base-1000);
   }
+
+  @media (max-width: 768px) {
+    @include flex(column, start, center);
+    padding: 2rem 0;
+  }
 }
+
 .statistics_container {
-  @include flex(row, start, center);
+  @include flex(row, start, center, nowrap);
   margin-top: 4rem;
+}
+
+.card {
+  position: absolute;
+  top: 100px;
+  right: 450px;
+  @media (max-width: 1300px) {
+    top: 100px;
+    right: 20px;
+  }
+  @media (max-width: 1300px) {
+    top: 350px;
+    right: 20px;
+  }
+  @media (max-width: 768px) {
+    top: 650px;
+    right: 250px;
+  }
 }

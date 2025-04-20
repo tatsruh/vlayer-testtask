@@ -3,6 +3,16 @@
   font-size: 64px;
   line-height: 110%;
   letter-spacing: -1%;
+  @media (max-width: 768px) {
+    font-size: 40px;
+  }
+
+}
+@mixin H2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 140%;
+
 }
 @mixin H3 {
   font-weight: 700;
@@ -13,6 +23,12 @@
 @mixin H4 {
   font-weight: 700;
   font-size: 24px;
+  line-height: 150%;
+  letter-spacing: -1%;
+}
+@mixin H4_Mobile {
+  font-size: 11.32px;
+  font-weight: 700;
   line-height: 150%;
   letter-spacing: -1%;
 }
@@ -33,7 +49,7 @@
   line-height: 140%;
 }
 @mixin Bold_16 {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: -0.5px;
@@ -43,6 +59,11 @@
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.5px;
+}
+@mixin Regular_26 {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 150%;
 }
 @mixin Regular_20 {
   font-weight: 500;
@@ -78,11 +99,12 @@
   box-sizing: border-box;
   width: 100%;
 }
-@mixin flex($direction: row, $justify: start, $align: start) {
+@mixin flex($direction: row, $justify: start, $align: start, $wrap: wrap) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
   align-items: $align;
+  flex-wrap: $wrap;
 }
 
 @mixin rounded-border($radius: 8px) {

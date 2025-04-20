@@ -20,6 +20,7 @@
     --Text-Paragraph: rgba(181, 184, 203, 1);
     --Text-Disabled: rgba(113, 119, 136, 1);
     --Neutral-200: rgba(234, 236, 244, 1);
+    --Border-Footer: rgba(232, 230, 249, 1)
 }
 a {
     text-decoration: none;

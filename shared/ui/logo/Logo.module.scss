@@ -1,3 +1,6 @@
+@import 'src/app/page.module.scss';
+
+
 @mixin svg_element {
   position: absolute;
   top: 15px;
@@ -19,6 +22,7 @@
 
 .secondary {
   position: relative;
+
   svg {
     fill: var(--Base-0);
   }
@@ -27,4 +31,11 @@
     stroke: var(--Secondary-500);
     @include svg_element;
   }
+}
+
+.logo_with_name_container {
+  @include flex(row, center, center);
+  @include Bold_20;
+  font-family: inherit;
+  gap: 0.5rem
 }
