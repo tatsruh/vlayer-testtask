@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import style from './Header.module.scss';
 import { LogoWithName } from '../../ui/logo/LogoWithName';
@@ -13,6 +13,16 @@ export const Header = () => {
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
   };
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [menuOpen]);
 
   const navigation: NavigationItemProps[] = [
     { title: 'Rent', url: '/' },

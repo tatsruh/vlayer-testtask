@@ -3,6 +3,7 @@
 .tabs {
   width: fit-content;
   @include flex(column, center, center);
+
 }
 
 .tabList {
