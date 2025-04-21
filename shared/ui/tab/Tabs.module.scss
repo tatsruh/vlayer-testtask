@@ -25,6 +25,9 @@
   cursor: pointer;
   color: var(--Base-600);
   transition: all 0.3s ease;
+  @media (max-width: 768px) {
+    padding: 0.5rem 1rem;
+  }
 
   &:hover,
   &:active {

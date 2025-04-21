@@ -10,6 +10,9 @@
   color: var(--Base-1000);
   margin-bottom: 3rem;
   text-align: center;
+  @media (max-width: 768px) {
+    max-width: 20rem;
+  }
 }
 .testimonial_name {
   @include Bold_16;

@@ -12,6 +12,9 @@
   font-weight: 700;
   font-size: 40px;
   line-height: 140%;
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
 
 }
 @mixin H3 {
