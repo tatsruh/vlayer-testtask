@@ -5,7 +5,7 @@ import Image from 'next/image';
 import style from './Card.module.scss';
 import { IconButton } from '../icon/IconButton';
 import { CardCategory } from './CardCategory';
-import { PropertyProps } from '@/features/propertiesSlice';
+import { PropertyProps } from '@/features/types/types';
 
 export type CardProps = Omit<PropertyProps, 'id'> & {
   version?: 'primary' | 'secondary';
