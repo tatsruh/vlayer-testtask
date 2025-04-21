@@ -25,11 +25,11 @@
     @include Regular_16;
     color: var(--Base-600);
     @include text;
-    margin: 0 auto;
   }
 
   @media (max-width: 768px) {
-    padding: 0 0.5rem;
+    padding: 0 1rem;
+
   }
 
 }
