@@ -36,3 +36,29 @@
   gap: 2rem;
 
 }
+
+.embla__container {
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  @media (max-width: 900px) {
+    width: 700px;
+  }
+  @media (max-width: 768px) {
+    width: 400px;
+  }
+}
+.embla__slide {
+  flex: 0 0 33.33%;
+  min-width: 0;
+  user-select: none;
+
+  @media (max-width: 900px) {
+    flex: 0 0 50%;
+  }
+
+  @media (max-width: 768px) {
+    flex: 0 0 90%;
+  }
+}
