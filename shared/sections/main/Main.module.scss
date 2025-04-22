@@ -1,7 +1,7 @@
 @import 'src/app/page.module.scss';
 
 .background_container {
-  background-image: url('../../../public/MapIllustration.png'),
+  background-image: url('../../../public/Backgroundimage.png'),
   linear-gradient(13deg, rgba(115, 42, 155, 0.1) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 100%);
   background-repeat: no-repeat;
   background-position: right top;
@@ -10,7 +10,7 @@
   @media (max-width: 768px) {
     min-height: 55rem;
     background-position: center bottom;
-    background-image: url('../../../public/MapIllustration2Mobile.png'),
+    background-image: url('../../../public/Backgroundimage-mobile.png'),
     radial-gradient(circle,rgba(243, 243, 255, 1) 60%, rgba(255, 255, 255, 1) 100%);
 
     //background-color: #F3F3FF;
@@ -67,6 +67,6 @@
   }
   @media (max-width: 768px) {
     top: 650px;
-    right: 250px;
+    right: 230px;
   }
 }
